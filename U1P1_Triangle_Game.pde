@@ -32,7 +32,7 @@ void draw()
     }
     if (frameCount >= 35){
       if (frameCount - circleColourTransistionFrameB > 1){
-        circleColourRFromRGB = circleColourRFromRGB -30;
+        circleColourRFromRGB = circleColourRFromRGB -15;
         circleColourTransistionFrameB = frameCount;
       }
     }
@@ -50,18 +50,13 @@ void draw()
     }
     if (frameCount >= 80){
       if (frameCount - circleColourTransistionFrameE > 1){
-        circleColourRFromRGB = circleColourRFromRGB +15;
+        circleColourRFromRGB = circleColourRFromRGB +30;
         circleColourTransistionFrameE = frameCount;
       }
     }
-    if (frameCount >= 200){
-      if (frameCount - circleColourTransistionFrameF > 1){
-        circleColourBFromRGB = circleColourBFromRGB -30;
-        circleColourTransistionFrameF = frameCount;
-      }
+    if (frameCount >=100){
+      
     }
-
-
 }
 void keyPressed()
 {
