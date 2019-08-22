@@ -54,9 +54,13 @@ void draw()
         circleColourTransistionFrameE = frameCount;
       }
     }
-    if (frameCount >=100){
-      
+    if (frameCount >= 110){
+      if (frameCount - circleColourTransistionFrameF > 1){
+        circleColourBFromRGB = circleColourBFromRGB -30;
+        circleColourTransistionFrameF = frameCount;
+      }
     }
+    
 }
 void keyPressed()
 {
