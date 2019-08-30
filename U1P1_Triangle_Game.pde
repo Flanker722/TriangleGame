@@ -1,5 +1,6 @@
 int circleSize = 50;
 boolean circleIsHit = false;
+int PointsValue;
 int hue;
 
 
@@ -14,13 +15,18 @@ void draw()
    if (mousePressed == false){
     noCursor();
   } 
-   
+  {
    String p = "Points : ";
    text(p, 10, 30);
-   textSize(20);
-   PFont SanSerif = createFont("San Serif", 24);
-   textFont(SanSerif);
-   
+   PFont Avenir = createFont("Avenir", 22);
+   textFont(Avenir);
+  }
+  {
+    String pv = "" + PointsValue;
+    text(pv, 92, 31);
+    PFont AvenirNum = createFont("Avenir", 24);
+    textFont(AvenirNum);
+  }
    ellipse(mouseX,mouseY,circleSize,circleSize);
    strokeWeight(0.1);
    stroke(hue,100,100);

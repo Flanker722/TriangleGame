@@ -10,6 +10,7 @@ float circleColourRFromRGB = 255;
 float circleColourGFromRGB = 0;
 float circleColourBFromRGB = 0;
 int unspecifiedForNow;
+int PointsValue;
 
 void setup()
 {
@@ -21,13 +22,18 @@ void draw()
    if (mousePressed == false){
     noCursor();
   }
-  
+   {
    String p = "Points : ";
    text(p, 10, 30);
-   textSize(20);
-   PFont SanSerif = createFont("San Serif", 24);
-   textFont(SanSerif);
-   
+   PFont Avenir = createFont("Avenir", 22);
+   textFont(Avenir);
+  }
+  {
+    String pv = "" + PointsValue;
+    text(pv, 92, 31);
+    PFont AvenirNum = createFont("Avenir", 24);
+    textFont(AvenirNum);
+  }
     ellipse(mouseX,mouseY,circleSize,circleSize);
     strokeWeight(0.1);
     stroke(circleColourRFromRGB,circleColourGFromRGB,circleColourBFromRGB);
