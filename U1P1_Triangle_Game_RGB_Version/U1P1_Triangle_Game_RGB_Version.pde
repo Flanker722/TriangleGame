@@ -20,7 +20,14 @@ void draw()
   background(57, 91, 95);
    if (mousePressed == false){
     noCursor();
-  } 
+  }
+  
+   String p = "Points : ";
+   text(p, 10, 30);
+   textSize(20);
+   PFont SanSerif = createFont("San Serif", 24);
+   textFont(SanSerif);
+   
     ellipse(mouseX,mouseY,circleSize,circleSize);
     strokeWeight(0.1);
     stroke(circleColourRFromRGB,circleColourGFromRGB,circleColourBFromRGB);

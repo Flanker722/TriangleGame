@@ -14,14 +14,22 @@ void draw()
    if (mousePressed == false){
     noCursor();
   } 
-    ellipse(mouseX,mouseY,circleSize,circleSize);
-    strokeWeight(0.1);
-    stroke(hue,100,100);
-    fill(hue,100,100);
-    hue = hue + 1;
-    if (hue > 360){
-      hue = 0;
-    }
+   
+   String p = "Points : ";
+   text(p, 10, 30);
+   textSize(20);
+   PFont SanSerif = createFont("San Serif", 24);
+   textFont(SanSerif);
+   
+   ellipse(mouseX,mouseY,circleSize,circleSize);
+   strokeWeight(0.1);
+   stroke(hue,100,100);
+   fill(hue,100,100);
+   hue = hue + 1;
+   if (hue > 360){
+     hue = 0;
+   }
+    
 }
 void keyPressed()
 {
