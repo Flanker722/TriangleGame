@@ -19,7 +19,11 @@ void setup()
 }
 void draw()
 {
-   background(0,50,43);
+   startScreen();
+}
+void startScreen()
+{
+  background(0,50,43);
    colourLoop2 = colourLoop2 + 1.1;
    if (colourLoop1 > 0){
      if(colourLoop2 > 360){
@@ -40,16 +44,23 @@ void draw()
    text(triangle,TextX,TextY);
    PFont futuraFont = createFont("Avenir", 30);
    textFont(futuraFont);
-   
+   colourLoop3 = colourLoop3 + 2;
+   if (colourLoop1 > 0){
+     if(colourLoop2 > 360){
+       if(colourLoop3 > 360){
+         colourLoop3 = 0;
+       }
+     }
+   }
    fill(colourLoop3,100,100);
    String start1 = ("Press Space To Start");
    text(start1,TextX3,TextY3);
    PFont AvenirStrTxt = createFont("Futura", 160);
    textFont(AvenirStrTxt);
-}
-void startScreen()
-{
-  
+   
+   if (key == ' '){
+     GameStarted();
+   }
 }
 void enterUsername()
 {
@@ -87,5 +98,5 @@ void GameStarted()
 }
 void keyPressed()
 {
-  
+
 }
