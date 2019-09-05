@@ -11,6 +11,7 @@ float colourLoop1;
 float colourLoop2;
 float colourLoop3;
 int hue;
+float Val360 = 180;
 
 void setup()
 {
@@ -23,7 +24,11 @@ void draw()
 }
 void startScreen()
 {
-  background(0,50,43);
+  background(Val360,56,92);
+  Val360 = Val360 + 1;
+  if(Val360 >= 360){
+    Val360 = 0;
+  }
    colourLoop2 = colourLoop2 + 1.1;
    if (colourLoop1 > 0){
      if(colourLoop2 > 360){
@@ -90,5 +95,5 @@ void GameStarted()
 }
 void keyPressed()
 {
-
+  
 }
